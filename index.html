@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YooChat by Kenzo - Message privée</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app">
+  <header><h1>YooChat BETA <small>by Kenzo</small></h1></header>
+
+  <main id="main">
+    <section id="auth">
+      <input id="username" placeholder="Pseudo" />
+      <input id="password" placeholder="Mot de passe" type="password" />
+      <div class="auth-actions">
+        <button id="btnRegister">S'inscrire</button>
+        <button id="btnLogin">Se connecter</button>
+      </div>
+      <div id="authMsg"></div>
+    </section>
+
+    <section id="chat" style="display:none">
+      <aside id="left">
+        <div id="profile">Connecté : <span id="me"></span></div>
+        <input id="search" placeholder="Rechercher contact..." />
+        <ul id="usersList"></ul>
+      </aside>
+      <section id="conversation">
+        <div id="chatHeader">Aucun chat sélectionné</div>
+        <div id="messages"></div>
+        <div id="composer">
+          <select id="toSelect"><option value="ALL">Tous (public)</option></select>
+          <input id="msgInput" placeholder="Écrire un message..." />
+          <button id="sendBtn">Envoyer</button>
+        </div>
+      </section>
+    </section>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
